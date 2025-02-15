@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { Menu } from '@headlessui/react';
-import { FaPlusCircle, FaTrashAlt, FaEdit, FaSync, FaSave, FaUndo } from 'react-icons/fa';
+import { FaPlus, FaTrashAlt, FaEdit, FaSync, FaSave, FaUndo } from 'react-icons/fa';
 
 const WorkCenter = () => {
   const initialRows = [
@@ -193,11 +193,11 @@ const WorkCenter = () => {
             <thead className="bg-gray-100">
               <tr>
                 <th className="border p-2 w-8">
-                  <input
+                  {/* <input
                     type="checkbox"
                     onChange={handleSelectAll}
                     checked={selectedRows.length === currentRows.length}
-                  />
+                  /> */}
                 </th>
                 <th className="border p-2">WORKCENTER</th>
                 <th className="border p-2">ENTRY DATE</th>
@@ -217,11 +217,11 @@ const WorkCenter = () => {
               {currentRows.map(row => (
                 <tr key={row.id} className="hover:bg-gray-50">
                   <td className="border p-2">
-                    <input
+                    {/* <input
                       type="checkbox"
                       checked={selectedRows.includes(row.id)}
                       onChange={() => toggleRowSelection(row.id)}
-                    />
+                    /> */}
                   </td>
                   <td className="border p-2">
                     <CustomDropdown
@@ -327,13 +327,13 @@ const WorkCenter = () => {
           <div className="flex items-center gap-4">
             <button
               onClick={addRow}
-              className="px-3 py-1 border rounded bg-green-500 text-white hover:bg-green-600 text-sm"
+              className="px-3 py-1 border rounded bg-green-200 text-black hover:bg-green-600 text-sm"
             >
-              <FaPlusCircle className="mr-1" /> Add Row
+              <FaPlus className="mr-1" /> Add Row
             </button>
             <button
               onClick={deleteSelectedRows}
-              className="px-3 py-1 border rounded bg-red-500 text-white hover:bg-red-600 text-sm"
+              className="px-3 py-1 border rounded bg-red-300 text-black hover:bg-red-600 text-sm"
               disabled={!selectedRows.length}
             >
               <FaTrashAlt className="mr-1" /> Delete
