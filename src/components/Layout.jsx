@@ -69,12 +69,14 @@ const menuItems = [
       {
         title: 'Master',
         submenu: [
+          { title: 'Shift Wise', path: '/config/master/shift-wise' },
           { title: 'Product Master', path: '/config/master/product' },
           { title: 'Customer Master', path: '/config/master/customer' },
-          { title: 'Workstation Master', path: '/config/master/workstation' },
+          { title: 'Workstation Master', path: '/config/master/workcenter' },
           { title: 'Process Flow', path: '/config/master/process' },
           { title: 'Attributes', path: '/config/master/attributes' },
           { title: 'Unit', path: '/config/master/unit' },
+          
         ],
       },
     ],
