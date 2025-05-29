@@ -1,3 +1,7 @@
+@import '@fontsource/poppins';
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+*{font-family: "Outfit", serif;}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -33,4 +37,14 @@
   max-height: 0;
   opacity: 0;
   transition: all 300ms ease-in-out;
+}
+
+/* Hide the scrollbar for the whole page */
+html, body {
+  overflow: hidden;
+}
+
+/* Optional: Hide scrollbar but allow scrolling */
+::-webkit-scrollbar {
+  display: none;
 }

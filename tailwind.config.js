@@ -1,10 +1,25 @@
-module.exports = {
+/** @type {import('tailwindcss').Config} */
+export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}", // Includes all JSX and TSX files inside src
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: "#1d4ed8", // Custom primary color
+        secondary: "#6b7280", // Custom secondary color
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+      },
+      screens: {
+        tab: "648px", // Custom breakpoint for tablets
+        desktop: "740px", // Custom breakpoint for desktops
+      },
+    },
   },
-  plugins: [],
-}
+  plugins: [
+    import("@tailwindcss/forms").then((module) => module.default),
+    import("@tailwindcss/typography").then((module) => module.default),
+  ],
+};
